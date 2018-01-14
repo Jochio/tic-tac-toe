@@ -1,0 +1,74 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+	text-align: center;
+	font-family: 'Indie Flower', arial;
+	background-color: #FFBA49;
+	width: 100%;
+	margin: 0;
+}
+
+h1, h2 {
+	margin: 0;
+}
+
+h1 {
+	font-size: 4em;
+}
+
+h2 {
+	font-size: 2em;
+}
+
+div#grid {
+	width: 50%;
+	height: auto;
+	margin: 0 auto;
+}
+
+div.box {
+	width: 33%;
+	height: 150px;
+	float: left;
+	font-size: 7em;
+}
+
+div#b0-0, div#b0-1, div#b0-2, div#b1-0, div#b1-1, div#b1-2 {
+	border-bottom: 3px solid black;
+}
+
+div#b0-0, div#b0-1, div#b1-0, div#b1-1, div#b2-0, div#b2-1 {
+	border-right: 3px solid black;	
+}
+
+p#message {
+	height: 35px;
+	background-color: #ffd899;
+	color: #cc7e00;
+	border: 1px solid #cc7e00;
+	margin: 0;
+	padding: 5px;
+}
+
+.clear {
+	clear: both;
+}
+
+button {
+	border: 1px solid black;
+	border-radius: 20px;
+	padding: 10px;
+	background-color: #FFBA49;
+	font-size: 1.1em;
+	font-family: 'Indie Flower', arial;
+	letter-spacing: 1px;
+	transition: all .5s;
+}
+
+button:hover {
+	background-color: #FFC059;
+	cursor: pointer;
+	font-size: 1.5em;
+}
