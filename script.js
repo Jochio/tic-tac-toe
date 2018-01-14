@@ -38,7 +38,9 @@ window.onload = function() {
 			board[row][col] = turn;
 			if (hasPlayerWon(turn)) {
 				gameOver = true;
-				showVictoryMessage();
+				showEndMessage("Congratulations! Player " + turn + " has won!");
+			} else if (isDraw()) {
+				showEndMessage("It's a draw!");
 			} else {
 				changeTurns();
 			}
@@ -60,9 +62,9 @@ window.onload = function() {
 		message.style.border = "1px solid #cc0000";
 	}
 
-	// Displays victory message with green color scheme and congratulates current player 
-	function showVictoryMessage() {
-		message.innerHTML = "Congratulations! Player " + turn + " has won!";
+	// Displays a custom message about a victory or a draw with a green color scheme
+	function showEndMessage(msg) {
+		message.innerHTML = msg;
 		message.style.opacity = 1;
 		message.style.backgroundColor = "#bfff80";
 		message.style.color = "#336600";
@@ -105,6 +107,21 @@ window.onload = function() {
 			return true;
 		}
 		return false;
+	}
+
+	// Checks if there has been a draw
+	function isDraw() {
+		// Loops through the board array to check for empty spaces
+		for (var r = 0; r <= 2; r++) {
+			for (var c = 0; c <= 2; c++) {
+				if (board[r][c] === ' ') {
+					// If there is an empty space, it's not a draw
+					return false;
+				}
+			}
+		}
+		// If no spaces are empty, it's a draw
+		return true;
 	}
 
 	function changeTurns() {
