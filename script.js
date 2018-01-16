@@ -40,6 +40,7 @@ window.onload = function() {
 				gameOver = true;
 				showEndMessage("Congratulations! Player " + turn + " has won!");
 			} else if (isDraw()) {
+				gameOver = true;
 				showEndMessage("It's a draw!");
 			} else {
 				changeTurns();
