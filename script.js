@@ -2,13 +2,10 @@ window.onload = function() {
 
 	// Tic-Tac-Toe board to track progress displayed on the user interface
 	var board = [];
-
 	// Stores the current turn, X or O
 	var turn;
-
 	// Keeps track of whether or not the current game is over
 	var gameOver;
-
 	// p element to display error and informational messages
 	var message = document.getElementById("message");
 
@@ -22,6 +19,35 @@ window.onload = function() {
 		// Get column from the fourth character of the id
 		var col = id[3];
 		updateBoard(row, col);
+	});
+
+	// Touch event listeners for mobile on each square
+	document.getElementById("b0-0").addEventListener("touchstart", function() {
+		updateBoard(0, 0);
+	});
+	document.getElementById("b0-1").addEventListener("touchstart", function() {
+		updateBoard(0, 1);
+	});
+	document.getElementById("b0-2").addEventListener("touchstart", function() {
+		updateBoard(0, 2);
+	});
+	document.getElementById("b1-0").addEventListener("touchstart", function() {
+		updateBoard(1, 0);
+	});
+	document.getElementById("b1-1").addEventListener("touchstart", function() {
+		updateBoard(1, 1);
+	});
+	document.getElementById("b1-2").addEventListener("touchstart", function() {
+		updateBoard(1, 2);
+	});
+	document.getElementById("b2-0").addEventListener("touchstart", function() {
+		updateBoard(2, 0);
+	});
+	document.getElementById("b2-1").addEventListener("touchstart", function() {
+		updateBoard(2, 1);
+	});
+	document.getElementById("b2-2").addEventListener("touchstart", function() {
+		updateBoard(2, 2);
 	});
 
 	// Event listener to reset the game when the 'New Game' button is clicked

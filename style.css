@@ -28,6 +28,10 @@ div#grid {
 	margin: 0 auto;
 }
 
+div#grid:hover {
+	cursor: pointer;
+}
+
 div.box {
 	width: 33%;
 	height: 150px;
