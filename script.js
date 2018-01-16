@@ -46,7 +46,7 @@ window.onload = function() {
 			}
 		} else {
 			if (gameOver) {
-				showErrorMessage("This game is over. Please press the 'New Game' button below to start a new game.");
+				showErrorMessage("This game is over.");
 			} else {
 				showErrorMessage("Invalid move.");
 			}
